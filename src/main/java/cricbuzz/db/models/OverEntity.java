@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class OverEntity {
-    private List<String> deliveries;
+    private final List<String> deliveries;
 
     public OverEntity(List<String> deliveries) {
         this.deliveries = deliveries;

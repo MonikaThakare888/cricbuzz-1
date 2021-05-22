@@ -5,7 +5,7 @@ import cricbuzz.models.deliveryresult.DeliveryResult;
 import java.util.List;
 
 public class Over {
-    private List<DeliveryResult> deliveries;
+    private final List<DeliveryResult> deliveries;
 
     public Over(List<DeliveryResult> deliveries) {
         this.deliveries = deliveries;

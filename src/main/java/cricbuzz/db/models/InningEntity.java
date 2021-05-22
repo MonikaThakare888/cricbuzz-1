@@ -7,8 +7,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class InningEntity {
-    private String name;
-    private List<OverEntity> overs;
+    private final String name;
+    private final List<OverEntity> overs;
 
     public InningEntity(String name, List<OverEntity> overs) {
         this.name = name;

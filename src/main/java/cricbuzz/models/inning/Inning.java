@@ -3,8 +3,8 @@ package cricbuzz.models.inning;
 import java.util.List;
 
 public class Inning {
-    private InningName name;
-    private List<Over> overs;
+    private final InningName name;
+    private final List<Over> overs;
 
     public Inning(InningName name, List<Over> overs) {
         this.name = name;
