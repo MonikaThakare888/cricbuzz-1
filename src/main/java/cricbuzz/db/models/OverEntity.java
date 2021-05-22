@@ -1,7 +1,7 @@
 package cricbuzz.db.models;
 
 import cricbuzz.models.inning.Over;
-import cricbuzz.models.deliveryresult.DeliveryResult;
+import cricbuzz.models.deliveryresult.Event;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -14,6 +14,6 @@ public class OverEntity {
     }
 
     public Over toOver() {
-        return new Over(deliveries.stream().map(DeliveryResult::from).collect(Collectors.toList()));
+        return new Over(deliveries.stream().map(Event::from).collect(Collectors.toList()));
     }
 }

@@ -1,13 +1,13 @@
 package cricbuzz.models.inning;
 
-import cricbuzz.models.deliveryresult.DeliveryResult;
+import cricbuzz.models.deliveryresult.Event;
 
 import java.util.List;
 
 public class Over {
-    private final List<DeliveryResult> deliveries;
+    private final List<Event> deliveries;
 
-    public Over(List<DeliveryResult> deliveries) {
+    public Over(List<Event> deliveries) {
         this.deliveries = deliveries;
     }
 

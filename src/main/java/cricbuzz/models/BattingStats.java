@@ -1,15 +1,15 @@
 package cricbuzz.models;
 
-import cricbuzz.models.deliveryresult.OutType;
-import cricbuzz.models.deliveryresult.RunType;
+import cricbuzz.models.deliveryresult.OutEvent;
+import cricbuzz.models.deliveryresult.RunEvent;
 
 import java.util.Map;
 
 public class BattingStats {
     private int runs;
     private int balls;
-    private Map<RunType, Integer> runsDistribution;
-    private OutType outType;
+    private Map<RunEvent, Integer> runsDistribution;
+    private OutEvent outEvent;
 
     public int getRuns() {
         return runs;
@@ -27,19 +27,19 @@ public class BattingStats {
         this.balls = balls;
     }
 
-    public Map<RunType, Integer> getRunsDistribution() {
+    public Map<RunEvent, Integer> getRunsDistribution() {
         return runsDistribution;
     }
 
-    public void setRunsDistribution(Map<RunType, Integer> runsDistribution) {
+    public void setRunsDistribution(Map<RunEvent, Integer> runsDistribution) {
         this.runsDistribution = runsDistribution;
     }
 
-    public OutType getOutType() {
-        return outType;
+    public OutEvent getOutType() {
+        return outEvent;
     }
 
-    public void setOutType(OutType outType) {
-        this.outType = outType;
+    public void setOutType(OutEvent outEvent) {
+        this.outEvent = outEvent;
     }
 }

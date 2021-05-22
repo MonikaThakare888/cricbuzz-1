@@ -5,6 +5,8 @@ public class Player {
     private String name;
     private BattingStats battingStats;
     private BowlingStats bowlingStats;
+    private int battingOrder;
+    private int bowlingOrder;
 
     public Player(int id, String name) {
         this.id = id;
@@ -41,5 +43,21 @@ public class Player {
 
     public void setBowlingStats(BowlingStats bowlingStats) {
         this.bowlingStats = bowlingStats;
+    }
+
+    public int getBattingOrder() {
+        return battingOrder;
+    }
+
+    public void setBattingOrder(int battingOrder) {
+        this.battingOrder = battingOrder;
+    }
+
+    public int getBowlingOrder() {
+        return bowlingOrder;
+    }
+
+    public void setBowlingOrder(int bowlingOrder) {
+        this.bowlingOrder = bowlingOrder;
     }
 }
