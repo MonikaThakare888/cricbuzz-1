@@ -1,6 +1,9 @@
 package cricbuzz.models;
 
-public class Player {
+import cricbuzz.models.deliveryresult.Event;
+import cricbuzz.strategy.UpdateStrategy;
+
+public class Player implements Observer{
     private int id;
     private String name;
     private BattingStats battingStats;
@@ -59,5 +62,10 @@ public class Player {
 
     public void setBowlingOrder(int bowlingOrder) {
         this.bowlingOrder = bowlingOrder;
+    }
+
+    @Override
+    public void update(Event event) {
+
     }
 }

@@ -11,6 +11,10 @@ public class Over {
         this.deliveries = deliveries;
     }
 
+    public List<Event> getDeliveries() {
+        return deliveries;
+    }
+
     @Override
     public String toString() {
         return "Over{" +

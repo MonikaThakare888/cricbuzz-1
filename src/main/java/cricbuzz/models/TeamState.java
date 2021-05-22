@@ -1,6 +1,9 @@
 package cricbuzz.models;
 
-public class TeamState {
+import cricbuzz.models.deliveryresult.Event;
+import cricbuzz.strategy.UpdateStrategy;
+
+public class TeamState implements Observer{
     private boolean isBatting;
     private Player strikeBatsman;
     private Player nonStrikeBatsman;
@@ -43,5 +46,10 @@ public class TeamState {
 
     public void setBowler(Player bowler) {
         this.bowler = bowler;
+    }
+
+    @Override
+    public void update(Event event) {
+
     }
 }

@@ -6,7 +6,7 @@ import cricbuzz.models.Team;
 import java.util.Arrays;
 import java.util.List;
 
-public class database {
+public class Database {
     public static List<Team> getTeams() {
         return Arrays.asList(
                 new Team(

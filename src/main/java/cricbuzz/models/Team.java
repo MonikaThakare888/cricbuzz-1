@@ -1,17 +1,18 @@
 package cricbuzz.models;
 
 import cricbuzz.models.deliveryresult.Event;
-import cricbuzz.models.deliveryresult.ExtraRunEvent;
 
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 public class Team {
     private String name;
     private List<Player> players;
-    private Map<ExtraRunEvent, Integer> extraRunsReceived;
-    private Map<ExtraRunEvent, Integer> extraRunsGiven;
+    private TeamExtras teamExtras;
     private TeamState teamState;
+
+    private final List<Observer> subscribers = new ArrayList<>();
+
 
     public Team(String name, List<Player> players) {
         this.name = name;
@@ -19,7 +20,10 @@ public class Team {
     }
 
     public void update(Event event){
-
+        this.subscribers.addAll(players);
+        this.subscribers.add(teamState);
+        this.subscribers.add(teamExtras);
+        subscribers.forEach(subscriber ->  subscriber.update(event));
     }
 
     public String getName() {
@@ -38,20 +42,12 @@ public class Team {
         this.players = players;
     }
 
-    public Map<ExtraRunEvent, Integer> getExtraRunsReceived() {
-        return extraRunsReceived;
+    public TeamExtras getTeamExtras() {
+        return teamExtras;
     }
 
-    public void setExtraRunsReceived(Map<ExtraRunEvent, Integer> extraRunsReceived) {
-        this.extraRunsReceived = extraRunsReceived;
-    }
-
-    public Map<ExtraRunEvent, Integer> getExtraRunsGiven() {
-        return extraRunsGiven;
-    }
-
-    public void setExtraRunsGiven(Map<ExtraRunEvent, Integer> extraRunsGiven) {
-        this.extraRunsGiven = extraRunsGiven;
+    public void setTeamExtras(TeamExtras teamExtras) {
+        this.teamExtras = teamExtras;
     }
 
     public TeamState getTeamState() {

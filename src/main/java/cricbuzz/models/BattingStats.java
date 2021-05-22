@@ -1,5 +1,6 @@
 package cricbuzz.models;
 
+import cricbuzz.models.deliveryresult.Event;
 import cricbuzz.models.deliveryresult.OutEvent;
 import cricbuzz.models.deliveryresult.RunEvent;
 
@@ -10,6 +11,10 @@ public class BattingStats {
     private int balls;
     private Map<RunEvent, Integer> runsDistribution;
     private OutEvent outEvent;
+
+    public void update(Event event){
+
+    }
 
     public int getRuns() {
         return runs;

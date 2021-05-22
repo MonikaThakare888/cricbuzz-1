@@ -11,6 +11,14 @@ public class Inning {
         this.overs = overs;
     }
 
+    public InningName getName() {
+        return name;
+    }
+
+    public List<Over> getOvers() {
+        return overs;
+    }
+
     @Override
     public String toString() {
         return "Inning{" +

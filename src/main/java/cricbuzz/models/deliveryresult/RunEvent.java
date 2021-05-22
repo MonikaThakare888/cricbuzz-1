@@ -11,7 +11,7 @@ public enum RunEvent implements Event {
             case THREE: return 3;
             case FOUR: return 4;
             case SIX: return 6;
-            default: return 0;
         }
+        return 0;
     }
 }
