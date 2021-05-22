@@ -3,11 +3,11 @@ package cricbuzz.models;
 import cricbuzz.models.deliveryresult.Event;
 import cricbuzz.strategy.UpdateStrategy;
 
-public class TeamState implements Observer{
-    private boolean isBatting;
-    private Player strikeBatsman;
-    private Player nonStrikeBatsman;
-    private Player bowler;
+public class TeamState {
+    private boolean isBatting; //team
+    private Player strikeBatsman; //player - batsman
+    private Player nonStrikeBatsman; //player - batsman
+    private Player bowler; //player - bowler
 
     public TeamState(boolean isBatting, Player strikeBatsman, Player nonStrikeBatsman, Player bowler) {
         this.isBatting = isBatting;
@@ -48,8 +48,4 @@ public class TeamState implements Observer{
         this.bowler = bowler;
     }
 
-    @Override
-    public void update(Event event) {
-
-    }
 }

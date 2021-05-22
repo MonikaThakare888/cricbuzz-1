@@ -32,7 +32,7 @@ public class TeamExtras implements Observer{
     }
 
     @Override
-    public void update(Event event) {
-
+    public void update(UpdateStrategy strategy, Event event) {
+        strategy.updateTeamExtras(this, event);
     }
 }

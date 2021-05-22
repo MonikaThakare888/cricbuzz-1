@@ -1,35 +1,27 @@
 package cricbuzz.models;
 
-import cricbuzz.models.deliveryresult.Event;
-import cricbuzz.strategy.UpdateStrategy;
-
-public class Player implements Observer{
-    private int id;
-    private String name;
+public class Player {
+    private final int id;
+    private final String name;
     private BattingStats battingStats;
     private BowlingStats bowlingStats;
-    private int battingOrder;
-    private int bowlingOrder;
+    private final int battingOrder;
+    private final int bowlingOrder;
+    private boolean isOnStrike;
 
-    public Player(int id, String name) {
+    public Player(int id, String name, int battingOrder, int bowlingOrder) {
         this.id = id;
         this.name = name;
+        this.battingOrder = battingOrder;
+        this.bowlingOrder = bowlingOrder;
     }
 
     public int getId() {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public String getName() {
         return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public BattingStats getBattingStats() {
@@ -52,20 +44,7 @@ public class Player implements Observer{
         return battingOrder;
     }
 
-    public void setBattingOrder(int battingOrder) {
-        this.battingOrder = battingOrder;
-    }
-
     public int getBowlingOrder() {
         return bowlingOrder;
-    }
-
-    public void setBowlingOrder(int bowlingOrder) {
-        this.bowlingOrder = bowlingOrder;
-    }
-
-    @Override
-    public void update(Event event) {
-
     }
 }

@@ -12,21 +12,21 @@ public class Database {
                 new Team(
                         "Mumbai Indians",
                         Arrays.asList(
-                                new Player(1, "Rohit Sharma"),
-                                new Player(2, "Quinton De Cock"),
-                                new Player(3, "Kiron Pollard"),
-                                new Player(4, "Jasprit Bumrah"),
-                                new Player(5, "Trent Boult")
+                                new Player(1, "Rohit Sharma", 1, 1),
+                                new Player(2, "Quinton De Cock", 2, 2),
+                                new Player(3, "Kiron Pollard", 3, 3),
+                                new Player(4, "Jasprit Bumrah", 4, 4),
+                                new Player(5, "Trent Boult", 5, 5)
                         )
                 ),
                 new Team(
                         "Chennai Super Kings",
                         Arrays.asList(
-                                new Player(1, "Mahendra Singh Dhoni"),
-                                new Player(2, "Faf Du Plesis"),
-                                new Player(3, "Ravindra Jadeja"),
-                                new Player(4, "Sam Curran"),
-                                new Player(5, "Dwayne Bravo")
+                                new Player(1, "Mahendra Singh Dhoni", 1,1 ),
+                                new Player(2, "Faf Du Plesis", 2, 2),
+                                new Player(3, "Ravindra Jadeja", 3, 3),
+                                new Player(4, "Sam Curran", 4, 4),
+                                new Player(5, "Dwayne Bravo", 5, 5)
                         )
                 )
         );

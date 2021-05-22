@@ -1,29 +1,25 @@
 package cricbuzz.models;
 
 import cricbuzz.models.deliveryresult.Event;
+import cricbuzz.strategy.UpdateStrategy;
+import cricbuzz.strategy.UpdateStrategyFactory;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
-public class Team {
+public class Team implements Observer{
     private String name;
     private List<Player> players;
     private TeamExtras teamExtras;
     private TeamState teamState;
+    private boolean isBatting;
 
-    private final List<Observer> subscribers = new ArrayList<>();
 
 
     public Team(String name, List<Player> players) {
         this.name = name;
         this.players = players;
-    }
-
-    public void update(Event event){
-        this.subscribers.addAll(players);
-        this.subscribers.add(teamState);
-        this.subscribers.add(teamExtras);
-        subscribers.forEach(subscriber ->  subscriber.update(event));
     }
 
     public String getName() {
@@ -56,5 +52,10 @@ public class Team {
 
     public void setTeamState(TeamState teamState) {
         this.teamState = teamState;
+    }
+
+    @Override
+    public void update(UpdateStrategy strategy, Event event) {
+        strategy.updateTeam(this, event);
     }
 }

@@ -1,18 +1,30 @@
 package cricbuzz.models;
 
-public class BowlingStats {
-    private int overs;
+import cricbuzz.models.deliveryresult.Event;
+import cricbuzz.strategy.UpdateStrategy;
+
+public class BowlingStats implements Observer{
+    private OversBowled oversBowled;
     private int runs;
     private int wickets;
     private int wides;
     private int noBalls;
+    private boolean isBowling;
 
-    public int getOvers() {
-        return overs;
+    public boolean isBowling() {
+        return isBowling;
     }
 
-    public void setOvers(int overs) {
-        this.overs = overs;
+    public void setBowling(boolean bowling) {
+        isBowling = bowling;
+    }
+
+    public OversBowled getOversBowled() {
+        return oversBowled;
+    }
+
+    public void setOversBowled(OversBowled oversBowled) {
+        this.oversBowled = oversBowled;
     }
 
     public int getRuns() {
@@ -45,5 +57,10 @@ public class BowlingStats {
 
     public void setNoBalls(int noBalls) {
         this.noBalls = noBalls;
+    }
+
+    @Override
+    public void update(UpdateStrategy strategy, Event event) {
+        strategy.updateBowlingStats(this, event);
     }
 }
