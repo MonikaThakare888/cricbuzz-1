@@ -1,7 +1,7 @@
 package cricbuzz.models;
 
-import cricbuzz.models.deliveryresult.Event;
-import cricbuzz.models.deliveryresult.ExtraRunEvent;
+import cricbuzz.models.event.Event;
+import cricbuzz.models.event.ExtraRunEvent;
 import cricbuzz.strategy.UpdateStrategy;
 
 import java.util.Map;

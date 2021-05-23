@@ -1,9 +1,9 @@
 package cricbuzz.strategy;
 
-import cricbuzz.models.deliveryresult.Event;
+import cricbuzz.models.event.Event;
 
-import static cricbuzz.models.deliveryresult.OutEvent.*;
-import static cricbuzz.models.deliveryresult.RunEvent.*;
+import static cricbuzz.models.event.OutEvent.*;
+import static cricbuzz.models.event.RunEvent.*;
 
 public class UpdateStrategyFactory {
     public UpdateStrategy getStrategy(Event event) {

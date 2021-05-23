@@ -4,8 +4,8 @@ import cricbuzz.models.BattingStats;
 import cricbuzz.models.BowlingStats;
 import cricbuzz.models.Team;
 import cricbuzz.models.TeamExtras;
-import cricbuzz.models.deliveryresult.Event;
-import cricbuzz.models.deliveryresult.OutEvent;
+import cricbuzz.models.event.Event;
+import cricbuzz.models.event.OutEvent;
 
 public class OutEventUpdateStrategy implements UpdateStrategy {
 

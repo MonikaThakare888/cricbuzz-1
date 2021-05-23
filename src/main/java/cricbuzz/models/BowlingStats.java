@@ -1,6 +1,6 @@
 package cricbuzz.models;
 
-import cricbuzz.models.deliveryresult.Event;
+import cricbuzz.models.event.Event;
 import cricbuzz.strategy.UpdateStrategy;
 
 public class BowlingStats implements Observer{

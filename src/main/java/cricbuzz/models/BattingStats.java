@@ -1,8 +1,8 @@
 package cricbuzz.models;
 
-import cricbuzz.models.deliveryresult.Event;
-import cricbuzz.models.deliveryresult.OutEvent;
-import cricbuzz.models.deliveryresult.RunEvent;
+import cricbuzz.models.event.Event;
+import cricbuzz.models.event.OutEvent;
+import cricbuzz.models.event.RunEvent;
 import cricbuzz.strategy.UpdateStrategy;
 
 import java.util.Map;

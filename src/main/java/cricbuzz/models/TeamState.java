@@ -1,8 +1,5 @@
 package cricbuzz.models;
 
-import cricbuzz.models.deliveryresult.Event;
-import cricbuzz.strategy.UpdateStrategy;
-
 public class TeamState {
     private boolean isBatting; //team
     private Player strikeBatsman; //player - batsman

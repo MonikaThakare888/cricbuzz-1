@@ -1,10 +1,8 @@
 package cricbuzz.strategy;
 
 import cricbuzz.models.*;
-import cricbuzz.models.deliveryresult.Event;
-import cricbuzz.models.deliveryresult.RunEvent;
-
-import java.util.Map;
+import cricbuzz.models.event.Event;
+import cricbuzz.models.event.RunEvent;
 
 public class RunEventUpdateStrategy implements UpdateStrategy {
 

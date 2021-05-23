@@ -1,17 +1,12 @@
 package cricbuzz;
 
 import cricbuzz.db.Repository;
-import cricbuzz.models.Observer;
 import cricbuzz.models.Player;
 import cricbuzz.models.Team;
-import cricbuzz.models.deliveryresult.EndEvent;
-import cricbuzz.models.deliveryresult.Event;
+import cricbuzz.models.event.EndEvent;
 import cricbuzz.models.inning.Inning;
-import cricbuzz.strategy.UpdateStrategy;
-import cricbuzz.strategy.UpdateStrategyFactory;
 
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 

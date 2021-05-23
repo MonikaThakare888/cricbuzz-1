@@ -1,7 +1,7 @@
 package cricbuzz.strategy;
 
 import cricbuzz.models.*;
-import cricbuzz.models.deliveryresult.Event;
+import cricbuzz.models.event.Event;
 
 public interface UpdateStrategy {
     public void updateBattingStats(BattingStats battingStats, Event event);

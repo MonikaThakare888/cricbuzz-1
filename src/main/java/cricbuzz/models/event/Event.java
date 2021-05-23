@@ -1,4 +1,4 @@
-package cricbuzz.models.deliveryresult;
+package cricbuzz.models.event;
 
 public interface Event {
     static Event from(String outType) {
