@@ -27,16 +27,16 @@ public class BattingStats implements Observer {
         return isStrikeBatsman;
     }
 
-    public void setStrikeBatsman(boolean strikeBatsman) {
-        isStrikeBatsman = strikeBatsman;
+    public void setIsStrikeBatsman(boolean isStrikeBatsman) {
+        this.isStrikeBatsman = isStrikeBatsman;
     }
 
     public boolean isNonStrikeBatsman() {
         return isNonStrikeBatsman;
     }
 
-    public void setNonStrikeBatsman(boolean nonStrikeBatsman) {
-        isNonStrikeBatsman = nonStrikeBatsman;
+    public void setIsNonStrikeBatsman(boolean isNonStrikeBatsman) {
+        this.isNonStrikeBatsman = isNonStrikeBatsman;
     }
 
     public int getRuns() {

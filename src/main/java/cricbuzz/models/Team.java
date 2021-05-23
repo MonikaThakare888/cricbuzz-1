@@ -2,11 +2,8 @@ package cricbuzz.models;
 
 import cricbuzz.models.deliveryresult.Event;
 import cricbuzz.strategy.UpdateStrategy;
-import cricbuzz.strategy.UpdateStrategyFactory;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class Team implements Observer{
     private String name;
@@ -14,8 +11,6 @@ public class Team implements Observer{
     private TeamExtras teamExtras;
     private TeamState teamState;
     private boolean isBatting;
-
-
 
     public Team(String name, List<Player> players) {
         this.name = name;
@@ -52,6 +47,14 @@ public class Team implements Observer{
 
     public void setTeamState(TeamState teamState) {
         this.teamState = teamState;
+    }
+
+    public boolean isBatting() {
+        return isBatting;
+    }
+
+    public void setBatting(boolean batting) {
+        isBatting = batting;
     }
 
     @Override
