@@ -5,6 +5,7 @@ import cricbuzz.event.Event;
 import static cricbuzz.event.EndEvent.INNING_END;
 import static cricbuzz.event.EndEvent.OVER_END;
 import static cricbuzz.event.ExtraRunEvent.*;
+import static cricbuzz.event.MatchEvent.MATCH_START;
 import static cricbuzz.event.OutEvent.*;
 import static cricbuzz.event.RunEvent.*;
 
@@ -18,6 +19,8 @@ public class UpdateStrategyFactory {
             return new ExtraRunEventUpdateStrategy();
         } else if (OVER_END.equals(event) || INNING_END.equals(event)) {
             return new EndEventUpdateStrategy();
+        } else if (MATCH_START.equals(event)) {
+            return new MatchEventUpdateStrategy();
         }
         return null;
     }
