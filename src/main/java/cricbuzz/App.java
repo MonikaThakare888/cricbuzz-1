@@ -15,8 +15,7 @@ import java.util.stream.Collectors;
 
 public class App {
     public static void main(String[] args) throws FileNotFoundException {
-        Team team1 = Database.getTeams().get(0);
-        Team team2 = Database.getTeams().get(1);
+
 
         TeamRepository teamRepository = new TeamRepository();
         teamRepository.getBothTeams();
