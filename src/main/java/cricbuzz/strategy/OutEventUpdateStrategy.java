@@ -26,10 +26,6 @@ public class OutEventUpdateStrategy implements UpdateStrategy {
     }
 
     @Override
-    public void updateTeamExtras(TeamExtras teamExtras, Event event) {
-    }
-
-    @Override
     public void updateTeam(Team team, Event event) {
         int currentBatsmanOrder = team.getPlayers().stream()
                 .filter( player -> player.getBattingStats().isStrikeBatsman())

@@ -27,7 +27,7 @@ public class BattingStats implements Observer {
         return outEvent;
     }
 
-    public void incrementRunEvent(RunEvent runEvent) {
+    public void updateRunDistribution(RunEvent runEvent) {
         this.runsDistribution.put(runEvent, this.runsDistribution.get(runEvent) + 1 );
     }
 

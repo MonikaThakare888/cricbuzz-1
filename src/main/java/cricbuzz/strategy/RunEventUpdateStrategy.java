@@ -13,7 +13,7 @@ public class RunEventUpdateStrategy implements UpdateStrategy {
             int runs = (runEvent).getRuns();
             battingStats.incrementRuns(runs);
             battingStats.incrementBalls();
-            battingStats.incrementRunEvent(runEvent);
+            battingStats.updateRunDistribution(runEvent);
         }
     }
 
@@ -25,10 +25,6 @@ public class RunEventUpdateStrategy implements UpdateStrategy {
             bowlingStats.incrementRuns(runs);
             bowlingStats.incrementOversBowled();
         }
-    }
-
-    @Override
-    public void updateTeamExtras(TeamExtras teamExtras, Event event) {
     }
 
     @Override
