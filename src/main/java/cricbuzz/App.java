@@ -1,6 +1,6 @@
 package cricbuzz;
 
-import cricbuzz.db.Repository;
+import cricbuzz.db.InningRepository;
 import cricbuzz.models.Player;
 import cricbuzz.models.Team;
 import cricbuzz.models.event.EndEvent;
@@ -27,8 +27,8 @@ public class App {
         manager.addSubscriber(team2.getPlayers().stream().map(Player::getBattingStats).collect(Collectors.toList()));
         manager.addSubscriber(team2.getPlayers().stream().map(Player::getBowlingStats).collect(Collectors.toList()));
 
-        Repository repository = new Repository();
-        List<Inning> innings = repository.getBothInnings();
+        InningRepository inningRepository = new InningRepository();
+        List<Inning> innings = inningRepository.getBothInnings();
         Inning firstInning = innings.get(0);
         Inning secondInning = innings.get(1);
 

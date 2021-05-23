@@ -3,7 +3,6 @@ package cricbuzz.strategy;
 import cricbuzz.models.BattingStats;
 import cricbuzz.models.BowlingStats;
 import cricbuzz.models.Team;
-import cricbuzz.models.TeamExtras;
 import cricbuzz.models.event.Event;
 import cricbuzz.models.event.OutEvent;
 

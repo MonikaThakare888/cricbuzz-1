@@ -12,7 +12,7 @@ import java.lang.reflect.Type;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class Repository {
+public class InningRepository {
     public List<Inning> getBothInnings() throws FileNotFoundException {
         Gson gson = new Gson();
         JsonReader inningJson = new JsonReader(new FileReader("src/main/resources/data.json"));
