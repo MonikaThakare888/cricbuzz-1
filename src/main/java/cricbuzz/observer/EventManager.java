@@ -1,6 +1,5 @@
-package cricbuzz;
+package cricbuzz.observer;
 
-import cricbuzz.models.Observer;
 import cricbuzz.models.event.Event;
 import cricbuzz.strategy.UpdateStrategy;
 import cricbuzz.strategy.UpdateStrategyFactory;

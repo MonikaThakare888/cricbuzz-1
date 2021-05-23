@@ -4,7 +4,7 @@ import cricbuzz.models.*;
 import cricbuzz.models.event.Event;
 
 public interface UpdateStrategy {
-    public void updateBattingStats(BattingStats battingStats, Event event);
-    public void updateBowlingStats(BowlingStats bowlingStats, Event event);
-    public void updateTeam(Team team, Event event);
+    void updateBattingStats(BattingStats battingStats, Event event);
+    void updateBowlingStats(BowlingStats bowlingStats, Event event);
+    void updateTeam(Team team, Event event);
 }

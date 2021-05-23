@@ -1,8 +1,8 @@
-package cricbuzz.models;
+package cricbuzz.observer;
 
 import cricbuzz.models.event.Event;
 import cricbuzz.strategy.UpdateStrategy;
 
 public interface Observer {
-    public void update(UpdateStrategy strategy, Event event);
+    void update(UpdateStrategy strategy, Event event);
 }

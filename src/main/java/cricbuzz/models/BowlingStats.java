@@ -1,9 +1,10 @@
 package cricbuzz.models;
 
 import cricbuzz.models.event.Event;
+import cricbuzz.observer.Observer;
 import cricbuzz.strategy.UpdateStrategy;
 
-public class BowlingStats implements Observer{
+public class BowlingStats implements Observer {
     private OversBowled oversBowled;
     private int runs;
     private int wickets;

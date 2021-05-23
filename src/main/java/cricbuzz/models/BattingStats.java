@@ -3,6 +3,7 @@ package cricbuzz.models;
 import cricbuzz.models.event.Event;
 import cricbuzz.models.event.OutEvent;
 import cricbuzz.models.event.RunEvent;
+import cricbuzz.observer.Observer;
 import cricbuzz.strategy.UpdateStrategy;
 
 import java.util.Map;

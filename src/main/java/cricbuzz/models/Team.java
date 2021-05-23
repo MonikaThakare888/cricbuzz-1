@@ -1,6 +1,7 @@
 package cricbuzz.models;
 
 import cricbuzz.models.event.Event;
+import cricbuzz.observer.Observer;
 import cricbuzz.strategy.UpdateStrategy;
 
 import java.util.List;
