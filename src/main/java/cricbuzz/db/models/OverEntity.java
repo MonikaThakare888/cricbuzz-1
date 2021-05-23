@@ -1,7 +1,7 @@
 package cricbuzz.db.models;
 
 import cricbuzz.models.inning.Over;
-import cricbuzz.models.event.Event;
+import cricbuzz.event.Event;
 
 import java.util.List;
 import java.util.stream.Collectors;

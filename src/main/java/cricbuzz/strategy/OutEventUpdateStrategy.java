@@ -3,8 +3,8 @@ package cricbuzz.strategy;
 import cricbuzz.models.BattingStats;
 import cricbuzz.models.BowlingStats;
 import cricbuzz.models.Team;
-import cricbuzz.models.event.Event;
-import cricbuzz.models.event.OutEvent;
+import cricbuzz.event.Event;
+import cricbuzz.event.OutEvent;
 
 public class OutEventUpdateStrategy implements UpdateStrategy {
 

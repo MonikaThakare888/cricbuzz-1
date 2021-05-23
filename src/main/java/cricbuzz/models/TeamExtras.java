@@ -1,11 +1,11 @@
 package cricbuzz.models;
 
-import cricbuzz.models.event.ExtraRunEvent;
+import cricbuzz.event.ExtraRunEvent;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import static cricbuzz.models.event.ExtraRunEvent.*;
+import static cricbuzz.event.ExtraRunEvent.*;
 
 public class TeamExtras {
     private Map<ExtraRunEvent, Integer> extraRunsReceived;

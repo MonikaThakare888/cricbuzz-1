@@ -3,10 +3,10 @@ package cricbuzz.strategy;
 import cricbuzz.models.BattingStats;
 import cricbuzz.models.BowlingStats;
 import cricbuzz.models.Team;
-import cricbuzz.models.event.Event;
-import cricbuzz.models.event.ExtraRunEvent;
+import cricbuzz.event.Event;
+import cricbuzz.event.ExtraRunEvent;
 
-import static cricbuzz.models.event.ExtraRunEvent.*;
+import static cricbuzz.event.ExtraRunEvent.*;
 
 public class ExtraRunEventUpdateStrategy implements UpdateStrategy{
 

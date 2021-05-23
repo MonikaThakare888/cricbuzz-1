@@ -1,16 +1,16 @@
 package cricbuzz.models;
 
-import cricbuzz.models.event.Event;
-import cricbuzz.models.event.OutEvent;
-import cricbuzz.models.event.RunEvent;
+import cricbuzz.event.Event;
+import cricbuzz.event.OutEvent;
+import cricbuzz.event.RunEvent;
 import cricbuzz.observer.Observer;
 import cricbuzz.strategy.UpdateStrategy;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import static cricbuzz.models.event.OutEvent.NOT_OUT;
-import static cricbuzz.models.event.RunEvent.*;
+import static cricbuzz.event.OutEvent.NOT_OUT;
+import static cricbuzz.event.RunEvent.*;
 
 public class BattingStats implements Observer {
     private int runs;

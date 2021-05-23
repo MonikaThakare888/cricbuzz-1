@@ -1,4 +1,4 @@
-package cricbuzz.models.event;
+package cricbuzz.event;
 
 public enum RunEvent implements Event {
     DOT, ONE, TWO, THREE, FOUR, SIX;

@@ -1,8 +1,8 @@
 package cricbuzz.strategy;
 
 import cricbuzz.models.*;
-import cricbuzz.models.event.Event;
-import cricbuzz.models.event.RunEvent;
+import cricbuzz.event.Event;
+import cricbuzz.event.RunEvent;
 
 public class RunEventUpdateStrategy implements UpdateStrategy {
 

@@ -1,12 +1,12 @@
 package cricbuzz.strategy;
 
-import cricbuzz.models.event.Event;
+import cricbuzz.event.Event;
 
-import static cricbuzz.models.event.EndEvent.INNING_END;
-import static cricbuzz.models.event.EndEvent.OVER_END;
-import static cricbuzz.models.event.ExtraRunEvent.*;
-import static cricbuzz.models.event.OutEvent.*;
-import static cricbuzz.models.event.RunEvent.*;
+import static cricbuzz.event.EndEvent.INNING_END;
+import static cricbuzz.event.EndEvent.OVER_END;
+import static cricbuzz.event.ExtraRunEvent.*;
+import static cricbuzz.event.OutEvent.*;
+import static cricbuzz.event.RunEvent.*;
 
 public class UpdateStrategyFactory {
     public UpdateStrategy getStrategy(Event event) {

@@ -3,9 +3,9 @@ package cricbuzz.strategy;
 import cricbuzz.models.BattingStats;
 import cricbuzz.models.BowlingStats;
 import cricbuzz.models.Team;
-import cricbuzz.models.event.Event;
+import cricbuzz.event.Event;
 
-import static cricbuzz.models.event.EndEvent.OVER_END;
+import static cricbuzz.event.EndEvent.OVER_END;
 
 public class EndEventUpdateStrategy implements UpdateStrategy{
     @Override

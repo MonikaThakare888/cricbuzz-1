@@ -1,6 +1,6 @@
 package cricbuzz.models.inning;
 
-import cricbuzz.models.event.Event;
+import cricbuzz.event.Event;
 
 import java.util.List;
 
