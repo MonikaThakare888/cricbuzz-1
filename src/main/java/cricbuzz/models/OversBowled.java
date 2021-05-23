@@ -4,9 +4,9 @@ public class OversBowled {
     private int overs;
     private int balls;
 
-    public OversBowled(int overs, int balls) {
-        this.overs = overs;
-        this.balls = balls;
+    public OversBowled() {
+        this.overs = 0;
+        this.balls = 0;
     }
 
     public void increment(){

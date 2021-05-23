@@ -6,7 +6,11 @@ import cricbuzz.models.event.RunEvent;
 import cricbuzz.observer.Observer;
 import cricbuzz.strategy.UpdateStrategy;
 
+import java.util.HashMap;
 import java.util.Map;
+
+import static cricbuzz.models.event.OutEvent.NOT_OUT;
+import static cricbuzz.models.event.RunEvent.*;
 
 public class BattingStats implements Observer {
     private int runs;
@@ -15,6 +19,22 @@ public class BattingStats implements Observer {
     private OutEvent outEvent;
     private boolean isStrikeBatsman;
     private boolean isNonStrikeBatsman;
+
+    public BattingStats() {
+        Map<RunEvent, Integer> defaultRunsDistribution = new HashMap<>();
+        defaultRunsDistribution.put(DOT, 0);
+        defaultRunsDistribution.put(ONE, 0);
+        defaultRunsDistribution.put(TWO, 0);
+        defaultRunsDistribution.put(THREE, 0);
+        defaultRunsDistribution.put(FOUR, 0);
+        defaultRunsDistribution.put(SIX, 0);
+        this.runs = 0;
+        this.balls = 0;
+        this.outEvent = NOT_OUT;
+        this.isStrikeBatsman = false;
+        this.isNonStrikeBatsman = false;
+        this.runsDistribution = defaultRunsDistribution;
+    }
 
     public void incrementRuns(int runs) {
         this.runs += runs;

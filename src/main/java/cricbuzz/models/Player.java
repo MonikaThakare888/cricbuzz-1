@@ -13,6 +13,8 @@ public class Player {
         this.name = name;
         this.battingOrder = battingOrder;
         this.bowlingOrder = bowlingOrder;
+        this.battingStats = new BattingStats();
+        this.bowlingStats = new BowlingStats();
     }
 
     public int getId() {

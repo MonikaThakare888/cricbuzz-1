@@ -15,6 +15,8 @@ public class Team implements Observer {
     public Team(String name, List<Player> players) {
         this.name = name;
         this.players = players;
+        this.teamExtras = new TeamExtras();
+        this.isBatting = false;
     }
 
     public String getName() {
