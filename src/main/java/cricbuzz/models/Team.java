@@ -5,11 +5,10 @@ import cricbuzz.strategy.UpdateStrategy;
 
 import java.util.List;
 
-public class Team implements Observer{
+public class Team implements Observer {
     private String name;
     private List<Player> players;
     private TeamExtras teamExtras;
-    private TeamState teamState;
     private boolean isBatting;
 
     public Team(String name, List<Player> players) {
@@ -39,14 +38,6 @@ public class Team implements Observer{
 
     public void setTeamExtras(TeamExtras teamExtras) {
         this.teamExtras = teamExtras;
-    }
-
-    public TeamState getTeamState() {
-        return teamState;
-    }
-
-    public void setTeamState(TeamState teamState) {
-        this.teamState = teamState;
     }
 
     public boolean isBatting() {

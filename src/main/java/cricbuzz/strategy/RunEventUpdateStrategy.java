@@ -13,19 +13,19 @@ public class RunEventUpdateStrategy implements UpdateStrategy {
         if(battingStats.isStrikeBatsman()) {
             RunEvent runEvent = (RunEvent) event;
             int runs = (runEvent).getRuns();
-            battingStats.setRuns(battingStats.getRuns() + runs);
-            battingStats.setBalls(battingStats.getBalls() + 1);
-            Map<RunEvent, Integer> runDistribution = battingStats.getRunsDistribution();
-            runDistribution.put((runEvent), runDistribution.get(runEvent) + 1);
-            battingStats.setRunsDistribution(runDistribution);
+            battingStats.incrementRuns(runs);
+            battingStats.incrementBalls();
+            battingStats.incrementRunEvent(runEvent);
         }
     }
 
     @Override
     public void updateBowlingStats(BowlingStats bowlingStats, Event event) {
         if (bowlingStats.isBowling()) {
-            bowlingStats.getOversBowled().setBalls(bowlingStats.getOversBowled().getBalls() +1);
-            bowlingStats.setRuns(bowlingStats.getRuns() + 1);
+            RunEvent runEvent = (RunEvent) event;
+            int runs = (runEvent).getRuns();
+            bowlingStats.incrementRuns(runs);
+            bowlingStats.incrementOversBowled();
         }
     }
 

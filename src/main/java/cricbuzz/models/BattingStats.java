@@ -15,8 +15,20 @@ public class BattingStats implements Observer {
     private boolean isStrikeBatsman;
     private boolean isNonStrikeBatsman;
 
+    public void incrementRuns(int runs) {
+        this.runs += runs;
+    }
+
+    public void incrementBalls() {
+        this.balls += 1;
+    }
+
     public OutEvent getOutEvent() {
         return outEvent;
+    }
+
+    public void incrementRunEvent(RunEvent runEvent) {
+        this.runsDistribution.put(runEvent, this.runsDistribution.get(runEvent) + 1 );
     }
 
     public void setOutEvent(OutEvent outEvent) {

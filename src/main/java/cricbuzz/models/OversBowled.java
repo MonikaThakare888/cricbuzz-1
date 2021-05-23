@@ -9,6 +9,14 @@ public class OversBowled {
         this.balls = balls;
     }
 
+    public void increment(){
+        this.balls += 1;
+        if (balls == 6) {
+            this.balls = 0;
+            this.overs += 1;
+        }
+    }
+
     public int getOvers() {
         return overs;
     }

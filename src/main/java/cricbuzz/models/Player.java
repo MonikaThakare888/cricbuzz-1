@@ -7,7 +7,6 @@ public class Player {
     private BowlingStats bowlingStats;
     private final int battingOrder;
     private final int bowlingOrder;
-    private boolean isOnStrike;
 
     public Player(int id, String name, int battingOrder, int bowlingOrder) {
         this.id = id;

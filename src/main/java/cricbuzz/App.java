@@ -22,15 +22,16 @@ public class App {
 
         EventManager manager = new EventManager();
 
+        manager.addSubscriber(team1);
+        manager.addSubscriber(team2);
+
         manager.addSubscriber(team1.getPlayers().stream().map(Player::getBattingStats).collect(Collectors.toList()));
         manager.addSubscriber(team1.getPlayers().stream().map(Player::getBowlingStats).collect(Collectors.toList()));
         manager.addSubscriber(team1.getTeamExtras());
-        manager.addSubscriber(team1);
 
         manager.addSubscriber(team2.getPlayers().stream().map(Player::getBattingStats).collect(Collectors.toList()));
         manager.addSubscriber(team2.getPlayers().stream().map(Player::getBowlingStats).collect(Collectors.toList()));
         manager.addSubscriber(team2.getTeamExtras());
-        manager.addSubscriber(team2);
 
         Repository repository = new Repository();
         List<Inning> innings = repository.getBothInnings();

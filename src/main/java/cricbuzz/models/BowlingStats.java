@@ -11,6 +11,26 @@ public class BowlingStats implements Observer{
     private int noBalls;
     private boolean isBowling;
 
+    public void incrementOversBowled() {
+        this.oversBowled.increment();
+    }
+
+    public void incrementRuns(int runs) {
+        this.runs += runs;
+    }
+
+    public void incrementWickets() {
+        this.wickets += 1;
+    }
+
+    public void incrementNoBalls() {
+        this.noBalls += 1;
+    }
+
+    public void incrementWides() {
+        this.wides += 1;
+    }
+
     public boolean isBowling() {
         return isBowling;
     }
