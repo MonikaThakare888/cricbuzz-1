@@ -1,6 +1,8 @@
 package cricbuzz;
 
+import com.google.gson.Gson;
 import cricbuzz.db.InningRepository;
+import cricbuzz.db.TeamRepository;
 import cricbuzz.models.Player;
 import cricbuzz.models.Team;
 import cricbuzz.models.event.EndEvent;
@@ -16,31 +18,34 @@ public class App {
         Team team1 = Database.getTeams().get(0);
         Team team2 = Database.getTeams().get(1);
 
-        EventManager manager = new EventManager();
+        TeamRepository teamRepository = new TeamRepository();
+        teamRepository.getBothTeams();
 
-        manager.addSubscriber(team1);
-        manager.addSubscriber(team2);
+//        EventManager manager = new EventManager();
+//
+//        manager.addSubscriber(team1);
+//        manager.addSubscriber(team2);
+//
+//        manager.addSubscriber(team1.getPlayers().stream().map(Player::getBattingStats).collect(Collectors.toList()));
+//        manager.addSubscriber(team1.getPlayers().stream().map(Player::getBowlingStats).collect(Collectors.toList()));
+//
+//        manager.addSubscriber(team2.getPlayers().stream().map(Player::getBattingStats).collect(Collectors.toList()));
+//        manager.addSubscriber(team2.getPlayers().stream().map(Player::getBowlingStats).collect(Collectors.toList()));
+//
+//        InningRepository inningRepository = new InningRepository();
+//        List<Inning> innings = inningRepository.getBothInnings();
+//        Inning firstInning = innings.get(0);
+//        Inning secondInning = innings.get(1);
 
-        manager.addSubscriber(team1.getPlayers().stream().map(Player::getBattingStats).collect(Collectors.toList()));
-        manager.addSubscriber(team1.getPlayers().stream().map(Player::getBowlingStats).collect(Collectors.toList()));
-
-        manager.addSubscriber(team2.getPlayers().stream().map(Player::getBattingStats).collect(Collectors.toList()));
-        manager.addSubscriber(team2.getPlayers().stream().map(Player::getBowlingStats).collect(Collectors.toList()));
-
-        InningRepository inningRepository = new InningRepository();
-        List<Inning> innings = inningRepository.getBothInnings();
-        Inning firstInning = innings.get(0);
-        Inning secondInning = innings.get(1);
-
-        firstInning.getOvers().forEach( over -> {
-            over.getDeliveries().forEach(manager::notifySubscribers);
-            manager.notifySubscribers(EndEvent.OVER_END);
-        });
-        manager.notifySubscribers(EndEvent.INNING_END);
-        secondInning.getOvers().forEach( over -> {
-            over.getDeliveries().forEach(manager::notifySubscribers);
-            manager.notifySubscribers(EndEvent.OVER_END);
-        });
-        manager.notifySubscribers(EndEvent.INNING_END);
+//        firstInning.getOvers().forEach( over -> {
+//            over.getDeliveries().forEach(manager::notifySubscribers);
+//            manager.notifySubscribers(EndEvent.OVER_END);
+//        });
+//        manager.notifySubscribers(EndEvent.INNING_END);
+//        secondInning.getOvers().forEach( over -> {
+//            over.getDeliveries().forEach(manager::notifySubscribers);
+//            manager.notifySubscribers(EndEvent.OVER_END);
+//        });
+//        manager.notifySubscribers(EndEvent.INNING_END);
     }
 }
