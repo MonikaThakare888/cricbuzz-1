@@ -36,6 +36,5 @@ public class MatchEventUpdateStrategy implements UpdateStrategy{
                     .getBowlingStats()
                     .setBowling(true);
         }
-
     }
 }

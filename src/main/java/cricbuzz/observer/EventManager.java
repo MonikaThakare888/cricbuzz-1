@@ -4,10 +4,11 @@ import cricbuzz.event.Event;
 import cricbuzz.strategy.UpdateStrategy;
 import cricbuzz.strategy.UpdateStrategyFactory;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class EventManager {
-    private List<Observer> subscribers;
+    private List<Observer> subscribers = new ArrayList<>();
 
     public EventManager() {
     }

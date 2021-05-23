@@ -5,6 +5,7 @@ import cricbuzz.models.BowlingStats;
 import cricbuzz.models.Team;
 import cricbuzz.event.Event;
 
+import static cricbuzz.event.EndEvent.INNING_END;
 import static cricbuzz.event.EndEvent.OVER_END;
 
 public class EndEventUpdateStrategy implements UpdateStrategy{
@@ -12,8 +13,9 @@ public class EndEventUpdateStrategy implements UpdateStrategy{
     public void updateBattingStats(BattingStats battingStats, Event event) {
         if(event.equals(OVER_END)) {
             if(battingStats.isStrikeBatsman()) {
-                battingStats.setIsStrikeBatsman(false);
                 battingStats.setIsNonStrikeBatsman(true);
+                battingStats.setIsStrikeBatsman(false);
+                return;
             }
             if(battingStats.isNonStrikeBatsman()) {
                 battingStats.setIsStrikeBatsman(true);
@@ -35,12 +37,19 @@ public class EndEventUpdateStrategy implements UpdateStrategy{
                     .findFirst().get()
                     .getBowlingOrder();
             team.getPlayers().stream()
-                    .filter(player -> player.getBowlingOrder() == currentBowlingOrder + 1)
+                    .filter(player -> player.getBowlingOrder() == currentBowlingOrder)
                     .findFirst().get()
                     .getBowlingStats()
-                    .setBowling(true);
+                    .setBowling(false);
+            if (currentBowlingOrder < 5) {
+                team.getPlayers().stream()
+                        .filter(player -> player.getBowlingOrder() == currentBowlingOrder + 1)
+                        .findFirst().get()
+                        .getBowlingStats()
+                        .setBowling(true);
+            }
         }
-        else {
+        if(event.equals(INNING_END)) {
             team.setBatting(!team.isBatting());
         }
     }

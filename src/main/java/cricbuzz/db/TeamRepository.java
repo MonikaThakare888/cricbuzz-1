@@ -15,7 +15,6 @@ public class TeamRepository {
         Gson gson = new Gson();
         JsonReader inningJson = new JsonReader(new FileReader("src/main/resources/teams.json"));
         Type listType = new TypeToken<List<Team>>() {}.getType();
-        List<Team> teams = gson.fromJson(inningJson, listType);
-        return teams;
+        return gson.fromJson(inningJson, listType);
     }
 }
