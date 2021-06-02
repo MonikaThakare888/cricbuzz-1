@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Mumbai Indians",
+    "players": [
+      {
+        "id": 1,
+        "name": "Rohit Sharma",
+        "battingOrder": 1,
+        "bowlingOrder": 1
+      },
+      {
+        "id": 2,
+        "name": "Quinton De Cock",
+        "battingOrder": 2,
+        "bowlingOrder": 2
+      },
+      {
+        "id": 3,
+        "name": "Kiron Pollard",
+        "battingOrder": 3,
+        "bowlingOrder": 3
+      },
+      {
+        "id": 4,
+        "name": "Jasprit Bumrah",
+        "battingOrder": 4,
+        "bowlingOrder": 4
+      },
+      {
+        "id": 5,
+        "name": "Trent Boult",
+        "battingOrder": 5,
+        "bowlingOrder": 5
+      }
+    ]
+  },
+  {
+    "name": "Chennai Super Kings",
+    "players": [
+      {
+        "id": 1,
+        "name": "Mahendra Singh Dhoni",
+        "battingOrder": 1,
+        "bowlingOrder": 1
+      },
+      {
+        "id": 2,
+        "name": "Faf Du Plesis",
+        "battingOrder": 2,
+        "bowlingOrder": 2
+      },
+      {
+        "id": 3,
+        "name": "Ravindra Jadeja",
+        "battingOrder": 3,
+        "bowlingOrder": 3
+      },
+      {
+        "id": 4,
+        "name": "Sam Curran",
+        "battingOrder": 4,
+        "bowlingOrder": 4
+      },
+      {
+        "id": 5,
+        "name": "Dwayne Bravo",
+        "battingOrder": 5,
+        "bowlingOrder": 5
+      }
+    ]
+  }
+]
